@@ -1,6 +1,6 @@
 package com.example.lh.mvp.api;
 
-import com.example.lh.mvp.movie.HotMovieInfo;
+import com.example.lh.mvp.beans.HotMovieInfo;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

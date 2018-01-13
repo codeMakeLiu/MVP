@@ -1,4 +1,4 @@
-package com.example.lh.mvp.movie;
+package com.example.lh.mvp.beans;
 
 import java.io.Serializable;
 import java.util.List;

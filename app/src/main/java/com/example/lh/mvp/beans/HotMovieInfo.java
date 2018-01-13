@@ -1,4 +1,4 @@
-package com.example.lh.mvp.movie;
+package com.example.lh.mvp.beans;
 
 import com.google.gson.annotations.SerializedName;
 

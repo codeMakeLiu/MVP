@@ -11,8 +11,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewParent;
 
+import com.example.lh.mvp.api.DBManager;
 import com.example.lh.mvp.book.BookFragment;
 import com.example.lh.mvp.movie.MovieFragment;
+import com.example.lh.mvp.movie.MoviesContract;
+import com.example.lh.mvp.movie.MoviesPresenter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,10 +38,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpViewPager(ViewPager viewPager) {
         DBPagerAdapter dbPagerAdapter = new DBPagerAdapter(getSupportFragmentManager());
-        dbPagerAdapter.addFragment(new MovieFragment(),
+        MovieFragment movieFragment = MovieFragment.getInstance();
+        dbPagerAdapter.addFragment(movieFragment,
                 getResources().getString(R.string.tab_movie_fragment));
         dbPagerAdapter.addFragment(new BookFragment(),
                 getResources().getString(R.string.tab_book_fragment));
+        viewPager.setAdapter(dbPagerAdapter);
+        creatPresenter(movieFragment);
+
+    }
+
+    private void creatPresenter(MoviesContract.View movieBiew) {
+        new MoviesPresenter(movieBiew,DBManager.creatDBService());
     }
 
     static class DBPagerAdapter extends FragmentPagerAdapter{
