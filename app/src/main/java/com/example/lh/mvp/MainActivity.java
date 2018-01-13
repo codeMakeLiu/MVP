@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 getResources().getString(R.string.tab_movie_fragment));
         dbPagerAdapter.addFragment(new BookFragment(),
                 getResources().getString(R.string.tab_book_fragment));
-        viewPager.setAdapter(dbPagerAdapter);
-
     }
 
     static class DBPagerAdapter extends FragmentPagerAdapter{
