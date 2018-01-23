@@ -3,6 +3,7 @@ package com.example.lh.mvp.api;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -29,8 +30,14 @@ public class DBManager {
 
         return new Retrofit.Builder()
                 .baseUrl(IDBService.BASE_URL)
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())//轉換為rxjava
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(httpClient)
+                .client(httpClient)//攔截請求的數據，方便打log看
                 .build();
+//        return new Retrofit.Builder()
+//                .baseUrl(IDBService.BASE_URL)
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .client(httpClient)
+//                .build();
     }
 }

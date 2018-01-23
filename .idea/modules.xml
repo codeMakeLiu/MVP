@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MVP.iml" filepath="$PROJECT_DIR$/MVP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://G:\androidwork\workplace\MyMVP\mvpOne\MVP\app\app.iml" filepath="G:\androidwork\workplace\MyMVP\mvpOne\MVP\app\app.iml" />
-      <module fileurl="file://G:\androidwork\workplace\MyMVP\mvpOne\MVP\mvp.iml" filepath="G:\androidwork\workplace\MyMVP\mvpOne\MVP\mvp.iml" />
     </modules>
   </component>
 </project>

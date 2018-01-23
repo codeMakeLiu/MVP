@@ -24,14 +24,13 @@ import com.example.lh.mvp.api.DBManager;
 import com.example.lh.mvp.api.IDBService;
 import com.example.lh.mvp.beans.HotMovieInfo;
 import com.example.lh.mvp.beans.Movie;
+import com.example.lh.mvp.moviedetail.MovieDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.

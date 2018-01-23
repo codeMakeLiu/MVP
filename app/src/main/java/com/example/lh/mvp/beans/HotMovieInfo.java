@@ -2,13 +2,14 @@ package com.example.lh.mvp.beans;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by lh on 2018/1/13.
  */
 
-public class HotMovieInfo {
+public class HotMovieInfo implements Serializable{
 
     /**
      * count : 20
